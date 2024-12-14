@@ -6,7 +6,6 @@
   </app-message>
   <div v-else>
     <h1>Список собеседований</h1>
-
     <div class="flex align-items-center mb-5 gap-3">
       <div class="flex align-items-center">
         <app-radio
@@ -36,7 +35,9 @@
       <app-column field="hrName" header="Имя HR"></app-column>
       <app-column field="vacancyLink" header="Вакансия">
         <template #body="slotProps">
-          <a :href="slotProps.data.vacancyLink" target="_blank">Ссылка на вакансию</a>
+          <a :href="slotProps.data.vacancyLink" target="_blank" class="restart"
+            >Ссылка на вакансию</a
+          >
         </template>
       </app-column>
       <app-column header="Контакты">
@@ -224,5 +225,8 @@ onMounted(async () => {
 .interview-stages {
   display: flex;
   gap: 5px;
+}
+.restart {
+  color: white;
 }
 </style>

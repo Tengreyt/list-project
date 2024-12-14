@@ -1,5 +1,4 @@
 <template>
-  {{ userStore.userId }}
   <app-menubar :model="items" class="menu">
     <template #item="{ item, props }">
       <template v-if="item.show">
